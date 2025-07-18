@@ -1,0 +1,56 @@
+<div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #374151; background-color: #f9fafb; padding: 20px; margin: 0;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); overflow: hidden;">
+        
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 40px 30px; text-align: center;">
+            <div style="display: inline-block; width: 60px; height: 60px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; margin-bottom: 20px; line-height: 60px; font-size: 24px;">🪄</div>
+            <h1 style="font-size: 28px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.5px; margin-top: 0;">🔐 HelloWorld JWT</h1>
+            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Your passwordless authentication link</p>
+        </div>
+        
+        <!-- Content -->
+        <div style="padding: 40px 30px;">
+            <div style="font-size: 18px; font-weight: 500; color: #111827; margin-bottom: 20px;">Hello there! 👋</div>
+            
+            <div style="font-size: 16px; color: #6b7280; margin-bottom: 30px; line-height: 1.7;">
+                You've requested access to your HelloWorld JWT account. Click the magic link below to securely log in without a password.
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <a href="{{ .ConfirmationURL }}" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 16px; letter-spacing: 0.5px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                    🚀 Access Your Account
+                </a>
+            </div>
+            
+            <div style="background: #dbeafe; border: 1px solid #3b82f6; border-radius: 8px; padding: 20px; margin: 30px 0;">
+                <h3 style="color: #1e40af; font-size: 16px; font-weight: 600; margin-bottom: 10px; margin-top: 0;">✨ What happens next?</h3>
+                <p style="color: #1e40af; font-size: 14px; margin: 5px 0;">• Click the magic link above</p>
+                <p style="color: #1e40af; font-size: 14px; margin: 5px 0;">• You'll be securely authenticated</p>
+                <p style="color: #1e40af; font-size: 14px; margin: 5px 0;">• Access your personalized dashboard</p>
+                <p style="color: #1e40af; font-size: 14px; margin: 5px 0;">• Test your JWT backend integration</p>
+            </div>
+            
+            <div style="background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 16px; margin: 20px 0;">
+                <p style="color: #92400e; font-size: 14px; margin: 0;"><strong>🔒 Security Note:</strong> This link will expire in 24 hours and can only be used once. If you didn't request this email, you can safely ignore it.</p>
+            </div>
+            
+            <div style="height: 1px; background: #e5e7eb; margin: 30px 0;"></div>
+            
+            <div style="font-size: 16px; color: #6b7280; margin-bottom: 30px; line-height: 1.7;">
+                <strong>Having trouble?</strong> If the button above doesn't work, you can copy and paste this link into your browser:
+                <br><br>
+                <a href="{{ .ConfirmationURL }}" style="color: #3b82f6; word-break: break-all; text-decoration: none;">{{ .ConfirmationURL }}</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div style="background: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
+            <p style="color: #6b7280; font-size: 14px; margin: 5px 0; font-weight: 600;">HelloWorld JWT Demo</p>
+            <p style="color: #6b7280; font-size: 14px; margin: 5px 0;">Powered by SvelteKit + Supabase + Rust</p>
+            <p style="color: #6b7280; font-size: 14px; margin: 20px 0 5px 0;">
+                This email was sent because you requested access to your account. 
+                If you didn't make this request, please ignore this email.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User
+    participant App as SvelteKit App
+    participant Supabase as Supabase Auth
+    participant Email as Email Service
+    
+    User->>App: Enter email on login page
+    App->>Supabase: signInWithOtp(email)
+    Supabase->>Email: Send magic link email
+    Email-->>User: Magic link email delivered
+    
+    Note over User,Email: User clicks magic link in email
+    
+    User->>App: Click magic link (redirects to /magic-link)
+    App->>Supabase: Extract tokens from URL hash
+    App->>Supabase: setSession(access_token, refresh_token)
+    Supabase-->>App: Session established
+    App->>App: Update auth store & invalidate data
+    App->>User: Redirect to dashboard (authenticated)
